@@ -37,6 +37,7 @@ export default function NewItem(){
                     </div>
                     <div className="">
                     <select value={category} onChange={(event) => setCategory(event.target.value)} className="text-black w-36 h-12 rounded-md p-3">
+                    <option value="" disabled selected >Category</option>
                     <option value="produce">Produce</option>
                     <option value="dairy">Dairy</option>
                     <option value="bakery">Bakery</option>
