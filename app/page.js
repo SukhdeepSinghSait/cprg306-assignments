@@ -9,6 +9,7 @@ export default function RootPage(){
       <Link  className="flex-1 bg-slate-900 p-2 w-64 text-center" href= "/week-4">Week 4</Link><br />
       <Link  className="flex-1 bg-slate-900 p-2 w-64 text-center" href= "/week-5">Week 5</Link><br />
       <Link  className="flex-1 bg-slate-900 p-2 w-64 text-center" href= "/week-6">Week 6</Link><br />
+      <Link  className="flex-1 bg-slate-900 p-2 w-64 text-center" href= "/week-7">Week 7</Link><br />
       </section>
     </main>
   );
