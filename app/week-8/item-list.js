@@ -2,7 +2,7 @@
 import Item from "./item";
 import { useState } from "react";
 
-export default function ItemList({ items }) {
+export default function ItemList({ items, onItemSelect }) {
     const [sortBy, setSortBy] = useState("name");
 
     // Create a copy of items
@@ -57,13 +57,13 @@ export default function ItemList({ items }) {
                         <div key={category}>
                             <h2 className="text-2xl font-bold mt-4 capitalize">{category}</h2>
                             {groupedItems[category].map((item, index) => (
-                                <Item key={index} name={item.name} quantity={item.quantity} category={item.category} />
+                                <Item key={index} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)} />
                             ))}
                         </div>
                     ))
                 ) : (
                     sortedItems.map((item, index) => (
-                        <Item key={index} name={item.name} quantity={item.quantity} category={item.category} />
+                        <Item key={index} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)} />
                     ))
                 )}
             </section>
